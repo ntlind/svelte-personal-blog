@@ -24,7 +24,7 @@
 		--font-min: 16px;
 		--font-preferred: 0.8vw;
 		--font-max: 24px;
-		--title-min: 12px;
+		--title-min: 24px;
 		--title-preferred: 6vw;
 		--title-max: 52px;
 		--lineheight-multiplier: 1.4;
