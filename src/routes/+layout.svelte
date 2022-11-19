@@ -3,20 +3,32 @@
 	import '@fontsource/merriweather/900.css';
 	import '@fontsource/merriweather/700.css';
 	import '@fontsource/inter';
+
+	import Circle from '/images/circle.svg';
+	import Triangle from '/images/tri.svg';
+	import Square from '/images/square.svg';
 </script>
 
-<div class="max-w-screen-xl mx-auto my-6 text-xl lg:my-14">
+<div class="relative max-w-screen-xl mx-auto my-6 text-xl lg:my-14">
 	<nav class="flex flex-row justify-between">
-		<a href="/">
+		<a href="/" class="z-50">
 			<h1 class=" text-title-responsive">Nick Lind</h1>
 		</a>
-		<h2 class="invisible my-auto space-x-4 text-2xl sm:visible">
+		<h2 class="z-50 invisible my-auto space-x-4 text-2xl sm:visible">
 			<a href="/about">About</a>
 			<a href="/settings">Settings</a>
 		</h2>
 	</nav>
 </div>
-
+<div class="absolute z-0 object-cover w-[24rem] -top-48 -left-32 opacity-90">
+	<img src={Circle} alt="blob decorative shape" />
+</div>
+<div class="absolute z-0 object-cover w-[12rem] -top-32 right-96 opacity-70 rotate-45 ">
+	<img src={Triangle} alt="blob 2decorative shape" />
+</div>
+<div class="absolute z-0 object-cover w-[20rem] -right-24 -top-12 rotate-12">
+	<img src={Square} alt="blob decorative shape" />
+</div>
 <slot />
 
 <style>
