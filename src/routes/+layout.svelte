@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	import '../app.css';
-	import '@fontsource/questrial';
+	import '@fontsource/merriweather';
 	import '@fontsource/inter';
 </script>
 
@@ -13,19 +13,11 @@
 <slot />
 
 <style>
-	:global(body) {
+	:global(html) {
 		font-family: 'Inter', sans-serif;
 	}
 	:global(h1),
 	:global(h2) {
-		font-family: 'Questrial', sans-serif;
-	}
-
-	h1 {
-		font-weight: 400;
-		font-size: 800px;
-	}
-	h2 {
-		font-weight: 700;
+		font-family: 'Merriweather', sans-serif;
 	}
 </style>
