@@ -9,14 +9,14 @@
 	import Square from '/images/square.svg';
 </script>
 
-<div class="relative max-w-screen-xl mx-auto my-6 text-xl lg:my-10">
+<div class="relative max-w-screen-xl pb-12 mx-auto my-6 text-xl lg:my-14">
 	<nav class="flex flex-row justify-between">
 		<a href="/" class="z-50">
 			<h1 class=" text-title-responsive">Nick Lind</h1>
 		</a>
-		<h2 class="z-50 invisible my-auto space-x-4 text-2xl sm:visible">
+		<h2 class="z-50 invisible my-auto space-x-16 text-2xl sm:visible">
 			<a href="/about">About</a>
-			<a href="/settings">Settings</a>
+			<a href="/settings" class="px-4 py-2 text-white bg-emerald-900"> Contact </a>
 		</h2>
 	</nav>
 </div>
@@ -29,7 +29,10 @@
 <div class="absolute z-0 object-cover w-[20rem] -right-24 -top-12 rotate-12 opacity-70">
 	<img src={Square} alt="blob decorative shape" />
 </div>
-<slot />
+
+<main>
+	<slot />
+</main>
 
 <style>
 	:root {
@@ -47,11 +50,11 @@
 	}
 	:global(h1) {
 		font-family: 'Merriweather', sans-serif;
-		@apply text-green-900 font-black tracking-tighter;
+		@apply text-emerald-900 font-black tracking-tighter;
 	}
 	:global(h2) {
 		font-family: 'Merriweather', sans-serif;
-		@apply text-green-900 font-bold;
+		@apply text-emerald-900 font-bold;
 	}
 
 	.text-contrast {
