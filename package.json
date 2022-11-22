@@ -32,6 +32,7 @@
 	"dependencies": {
 		"@fontsource/inter": "^4.5.14",
 		"@fontsource/merriweather": "^4.5.14",
-		"@fontsource/questrial": "^4.5.10"
+		"@fontsource/questrial": "^4.5.10",
+		"vite-plugin-markdown": "^2.1.0"
 	}
 }
