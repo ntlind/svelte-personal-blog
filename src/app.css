@@ -2,9 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --font-min: 16px;
+    --font-preferred: 0.8vw;
+    --font-max: 24px;
+    --title-min: 36px;
+    --title-preferred: 6vw;
+    --title-max: 52px;
+    --lineheight-multiplier: 1.4;
+}
+
+.text-contrast {
+    color: #fff;
+    mix-blend-mode: difference;
+}
+.text-title-responsive {
+    font-size: clamp(var(--title-min), var(--title-preferred), var(--title-max));
+    line-height: clamp(
+        --lineheight-multipler * var(--title-min),
+        --lineheight-multipler * var(--title-preferred),
+        --lineheight-multipler * var(--title-max)
+    );
+}
+.text-responsive {
+    font-size: clamp(var(--font-min), var(--font-preferred), var(--font-max));
+    line-height: clamp(
+        --lineheight-multipler * var(--font-min),
+        --lineheight-multipler * var(--font-preferred),
+        --lineheight-multipler * var(--font-max)
+    );
+}
+
 body {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     /* Uncommnet for dark mode */
-    /* @apply bg-white dark:bg-slate-800 text-black dark:text-white text-center; */
+    /* @apply text-center text-black bg-white dark:bg-slate-800 dark:text-white; */
 
+}
+
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+h1 {
+    font-family: 'Merriweather', sans-serif;
+    @apply font-black tracking-tighter text-emerald-900;
+}
+h2 {
+    font-family: 'Merriweather', sans-serif;
+    @apply font-bold text-emerald-900;
 }

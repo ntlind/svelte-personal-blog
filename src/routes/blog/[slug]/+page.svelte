@@ -13,7 +13,7 @@
 
 <div class="flex flex-col mx-auto space-y-6 text-xl max-w-prose">
 	<div class="flex flex-row text-slate-500">{date} · {time} minute read</div>
-	<h1 class="text-6xl tracking-tight">{title}</h1>
+	<h1 class="tracking-tight text-title-responsive">{title}</h1>
 	<h2 class="w-9/12 text-2xl font-normal tracking-wide text-slate-700">{description}</h2>
 	<div class="pt-4">
 		<svg viewBox="0 0 100 1" xmlns="http://www.w3.org/2000/svg">
