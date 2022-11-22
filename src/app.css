@@ -9,7 +9,7 @@
     --title-min: 36px;
     --title-preferred: 6vw;
     --title-max: 52px;
-    --lineheight-multiplier: 1.4;
+    --lineheight-multiplier: 4;
 }
 
 .text-contrast {
@@ -19,9 +19,9 @@
 .text-title-responsive {
     font-size: clamp(var(--title-min), var(--title-preferred), var(--title-max));
     line-height: clamp(
-        --lineheight-multipler * var(--title-min),
-        --lineheight-multipler * var(--title-preferred),
-        --lineheight-multipler * var(--title-max)
+        1.2 * var(--title-min),
+        1.2 * var(--title-preferred),
+        1.2 * var(--title-max)
     );
 }
 .text-responsive {
@@ -46,7 +46,7 @@ html {
 }
 h1 {
     font-family: 'Merriweather', sans-serif;
-    @apply font-black tracking-tighter text-emerald-900;
+    @apply font-black leading-relaxed tracking-tighter text-emerald-900;
 }
 h2 {
     font-family: 'Merriweather', sans-serif;
