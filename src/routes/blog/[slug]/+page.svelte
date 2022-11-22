@@ -48,7 +48,7 @@
 				class="flex flex-col justify-center col-span-1 my-auto space-y-2 text-white align-middle"
 			>
 				<input
-					class="text-white bg-emerald-900 font-sm"
+					class="text-sm text-white bg-emerald-900"
 					placeholder="your_email@example.com"
 				/><button class="py-2 text-sm uppercase bg-white text-emerald-900">Subscribe</button>
 			</div>

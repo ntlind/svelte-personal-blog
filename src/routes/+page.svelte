@@ -1,2 +1,6 @@
-<h1 class="bg-red-500">Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1 class="flex flex-col text-title-responsive max-w-prose h-[40vh] mx-20 pb-20">
+	<div class="my-auto">
+		<div>I’m a developer & designer. Currently based anywhere.</div>
+		<div>I love building products.</div>
+	</div>
+</h1>
