@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import '@fontsource/merriweather/900.css';
-	import '@fontsource/merriweather/700.css';
+	// import '@fontsource/merriweather/700.css';
 	import '@fontsource/inter';
 
 	import Circle from '/images/circle.svg';
@@ -34,3 +34,6 @@
 <main>
 	<slot />
 </main>
+<footer class="flex h-16 mx-6 border-t-4 border-emerald-900">
+	<h2 class="my-auto">© 2022 Nick Lind</h2>
+</footer>

@@ -1,5 +1,8 @@
 <script>
 	export let data;
+	let entries = Object.values(data.posts).slice(1, 4);
+	let last = (a, i) => i == a.length - 1;
+
 	$: posts = data.posts;
 	$: slug = data.slug;
 	$: post = posts[slug];
@@ -32,5 +35,45 @@
 			</svg>
 		</div>
 		<div class="whitespace-pre-wrap lg:ml-12 lg:pl-24 text-slate-900">{@html body}</div>
+	</div>
+	<div class="my-auto mt-4 mb-12 text-2xl bg-emerald-900">
+		<div class="grid grid-cols-2 mx-6 my-4 space-x-12">
+			<div class="col-span-1 space-y-4">
+				<h2 class="text-white">
+					Hey - My name is Nick Lind. I'm a designer & developer who travels the world.
+				</h2>
+				<h2 class="text-white">If you liked my writing, check out more posts or subscribe.</h2>
+			</div>
+			<div
+				class="flex flex-col justify-center col-span-1 my-auto space-y-2 text-white align-middle"
+			>
+				<input
+					class="text-white bg-emerald-900 font-sm"
+					placeholder="your_email@example.com"
+				/><button class="py-2 text-sm uppercase bg-white text-emerald-900">Subscribe</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mx-6">
+	<div class="text-sm font-bold underline uppercase text-emerald-900">More Posts</div>
+	<div class="grid grid-cols-3 mx-4 space-x-16">
+		{#each entries as post, i}
+			{#if i != 2}
+				<div class="flex flex-col col-span-1 my-12 border-r-2 border-emerald-900">
+					<div class="flex flex-row mb-2 text-sm md:text-base text-slate-500">
+						{post.attributes.date} · {Math.round(post.html.split(' ').length / 238)} minute read
+					</div>
+					<h1 class="text-2xl tracking-tight">{post.attributes.title}</h1>
+				</div>
+			{:else}
+				<div class="flex flex-col col-span-1 my-12">
+					<div class="flex flex-row mb-2 text-sm md:text-base text-slate-500">
+						{post.attributes.date} · {Math.round(post.html.split(' ').length / 238)} minute read
+					</div>
+					<h1 class="text-2xl tracking-tight">{post.attributes.title}</h1>
+				</div>
+			{/if}
+		{/each}
 	</div>
 </div>
