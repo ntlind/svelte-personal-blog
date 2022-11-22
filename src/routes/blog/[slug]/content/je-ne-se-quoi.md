@@ -8,6 +8,8 @@ tags:
   - "rad"
 ---
 
+NOTE: Not my writing; included for testing purposes only. Original post [here](https://daniel.do/article/the-je-ne-sais-quoi-of-TikTok/).
+
 TikTok has taken over the world. Every other social media has a shallow copy of it that sucks. I stopped using most traditional social media about 5 years ago. I was happy without it — I didn’t feel like anything was missing from my life. If I stopped using TikTok, I would miss it. TikTok is different from everything that has come before it in many ways that are difficult to articulate. In French this concept is called “je ne sais quoi.” I also believe it’s the future of social media. As in, every subsequent successful social media product will incorporate some aspect of TikTok’s innovations. The problem is, I don’t think a lot of people understand what those innovations actually are. I’m a big fan of TikTok, so I thought I’d try to lay it out in this post.
 
 Recently this great article did a deep dive with metrics and data to try to quantify exactly why TikTok is better. This post is not that. It’s unapologetically anecdotal. Additionally, I’m aware that TikTok’s popularity has geo-political implications which are the subject of intense debate. This post doesn’t deal with that at all—it’s purely about TikTok as a product and platform.

@@ -1,5 +1,5 @@
 async function getPosts() {
-	const allPosts = import.meta.glob('./*.md', { eager: false });
+	const allPosts = import.meta.glob('./content/*.md', { eager: false });
 
 	let posts = {};
 	for (let path in allPosts) {
@@ -13,7 +13,7 @@ async function getPosts() {
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
 	const posts = getPosts();
-	const slug = './' + params.slug + '.md';
+	const slug = './content/' + params.slug + '.md';
 
 	return { posts: posts, slug: slug };
 }
