@@ -4,8 +4,8 @@
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <radialGradient id="myGradient">
-     <stop offset="1%" stop-color="#F5F9FF" />
-      <stop offset="99%" stop-color="#D0E2FF" />
+     <stop offset="1%" stop-color="#FDE7E7" />
+      <stop offset="99%" stop-color="#f87171" />
     </radialGradient>
   </defs>
 

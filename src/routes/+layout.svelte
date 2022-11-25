@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import '../app.css';
 	import '@fontsource/merriweather/900.css';
 	// import '@fontsource/merriweather/700.css';
@@ -10,15 +11,17 @@
 </script>
 
 <div class="overflow-hidden">
-	<div class="relative max-w-screen-xl py-8 mx-auto text-xl md:py-20">
-		<div class="absolute z-0 object-cover w-[20rem] -top-48 -left-32 opacity-90">
-			<img src={Circle} alt="blob decorative shape" />
-		</div>
-		<div class="absolute z-0 object-cover w-[12rem] -top-48 right-56 opacity-50 rotate-45 ">
-			<img src={Triangle} alt="blob 2decorative shape" />
-		</div>
-		<div class="absolute z-0 object-cover w-[20rem] -right-48 -top-24 rotate-12 opacity-70">
-			<img src={Square} alt="blob decorative shape" />
+	<div class="relative max-w-screen-xl py-8 mx-auto text-xl md:py-16">
+		<div class={$page.url.pathname === '/' ? 'invisible' : ''}>
+			<div class="absolute z-0 object-cover w-[20rem] -top-48 -left-32 opacity-50">
+				<img src={Circle} alt="blob decorative shape" />
+			</div>
+			<div class="absolute z-0 object-cover w-[12rem] -top-48 right-56 opacity-90 rotate-45 ">
+				<img src={Triangle} alt="blob 2decorative shape" />
+			</div>
+			<div class="absolute z-0 object-cover w-[20rem] -right-48 -top-24 rotate-12 opacity-70">
+				<img src={Square} alt="blob decorative shape" />
+			</div>
 		</div>
 		<nav class="flex flex-row justify-between mx-4">
 			<a href="/" class="z-50">
@@ -34,6 +37,8 @@
 <main>
 	<slot />
 </main>
-<footer class="flex h-16 mx-6 border-t-4 border-emerald-900">
-	<h2 class="my-auto">© 2022 Nick Lind</h2>
+<footer class="flex flex-col max-w-screen-xl mx-auto">
+	<div class="h-16 mx-2 border-t-4 md:mx-10 border-emerald-900">
+		<h2 class="my-auto">© 2022 Nick Lind</h2>
+	</div>
 </footer>

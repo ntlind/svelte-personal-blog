@@ -1,7 +1,6 @@
 <script>
 	export let data;
 	let entries = Object.values(data.posts).slice(1, 4);
-	let last = (a, i) => i == a.length - 1;
 
 	$: posts = data.posts;
 	$: slug = data.slug;

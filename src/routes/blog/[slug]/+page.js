@@ -13,7 +13,7 @@ async function getPosts() {
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
 	const posts = getPosts();
-	const slug = './content/' + params.slug + '.md';
+	const slug = params.slug ? './content/' + params.slug + '.md' : null;
 
 	return { posts: posts, slug: slug };
 }
