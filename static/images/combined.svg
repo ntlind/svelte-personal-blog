@@ -1,0 +1,91 @@
+<svg class="graphic" viewBox="0 0 399 401"
+		><defs
+			><filter id="circle"
+				><feGaussianBlur in="SourceGraphic" stdDeviation="15" /><feOffset
+					dy="-15"
+					dx="-15"
+				/><feComposite
+					in2="SourceGraphic"
+					operator="arithmetic"
+					k2="-1"
+					k3="1"
+					result="firstShadow"
+				/><feFlood flood-color="#F2958E" /><feComposite
+					in2="firstShadow"
+					operator="in"
+				/><feComposite in2="SourceGraphic" operator="over" result="firstShadow" /></filter
+			><filter id="triangle"
+				><feGaussianBlur in="SourceAlpha" stdDeviation="30" result="blur" /><feComposite
+					in2="SourceAlpha"
+					operator="arithmetic"
+					k2="-1"
+					k3="1"
+					result="shadowDiff"
+				/><feFlood flood-color="#68C6CC" /><feComposite
+					in2="shadowDiff"
+					operator="in"
+				/><feComposite in2="SourceGraphic" operator="over" result="firstShadow" /><feGaussianBlur
+					in="firstShadow"
+					stdDeviation="15"
+				/><feOffset dy="-7" dx="-12" /><feComposite
+					in2="firstShadow"
+					operator="arithmetic"
+					k2="-1"
+					k3="1"
+					result="shadowDiff"
+				/><feFlood flood-color="#68C6CC" /><feComposite
+					in2="shadowDiff"
+					operator="in"
+				/><feComposite in2="firstShadow" operator="over" /></filter
+			><filter id="rectangle"
+				><feGaussianBlur in="SourceAlpha" stdDeviation="23" /><feOffset
+					dy="5"
+					dx="5"
+					result="firstOffsetBlur"
+				/><feComposite
+					in2="SourceAlpha"
+					operator="arithmetic"
+					k2="-1"
+					k3="1"
+					result="shadowDiff"
+				/><feFlood flood-color="#D067B5" /><feComposite
+					in2="shadowDiff"
+					operator="in"
+				/><feComposite in2="SourceGraphic" operator="over" result="firstShadow" /><feGaussianBlur
+					in="firstShadow"
+					stdDeviation="23"
+				/><feOffset dy="-5" dx="-5" /><feComposite
+					in2="firstShadow"
+					operator="arithmetic"
+					k2="-1"
+					k3="1"
+					result="shadowDiff"
+				/><feFlood flood-color="#D067B5" /><feComposite
+					in2="shadowDiff"
+					operator="in"
+				/><feComposite in2="firstShadow" operator="over" /></filter
+			></defs
+		><circle
+			id="pink-oval-home"
+			cx="224.5"
+			cy="240.5"
+			r="160.5"
+			fill="#FBDCD8"
+			filter="url(#circle)"
+		/><polygon
+			id="cyan-triangle-home"
+			points="286.017 36.629 379.136 123.847 187.219 140.767"
+			transform="rotate(-20 283.178 88.698)"
+			filter="url(#triangle)"
+			fill="#96EBED"
+		/><rect
+			id="magenta-rectangle-home"
+			transform="rotate(-150 97.237 240.577)"
+			width="149.5"
+			height="68.5"
+			x="25.237"
+			y="229.077"
+			filter="url(#rectangle)"
+			fill="#E7A4F1"
+		/></svg
+	>

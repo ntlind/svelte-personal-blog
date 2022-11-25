@@ -1,12 +1,28 @@
 <script>
+	import Circle from '/images/circle.svg';
+	import Triangle from '/images/tri.svg';
+	import Square from '/images/square.svg';
+
 	export let data;
+	let keys = Object.keys(data.posts).slice(1, 5);
 	let entries = Object.values(data.posts).slice(1, 5);
 	let links = ['GitHub', 'LinkedIn', 'HackerNews', 'Goodreads'];
 </script>
 
 <div class="max-w-screen-xl mx-auto">
-	<h1 class="flex flex-col text-title-responsive  h-[40vh] pb-6">
-		<div class="mx-6 my-auto md:mx-20 lg:mx-32">
+	<h1 class="flex flex-col text-title-responsive  h-[40vh] pb-6 relative">
+		<div>
+			<div class="absolute z-0 object-cover w-[24rem] opacity-50 top-12">
+				<img src={Circle} alt="blob decorative shape" />
+			</div>
+			<div class="absolute z-0 object-cover w-[8rem] left-56 opacity-90 rotate-[80deg] ">
+				<img src={Triangle} alt="blob 2decorative shape" />
+			</div>
+			<div class="absolute z-0 object-cover w-[12rem] rotate-12 opacity-70 top-60">
+				<img src={Square} alt="blob decorative shape" />
+			</div>
+		</div>
+		<div class="relative mx-6 my-auto space-y-4 md:mx-20 lg:mx-32 z-2">
 			<div>I’m a developer & designer.</div>
 			<div>Currently based anywhere.</div>
 			<div>I love building products.</div>
@@ -19,7 +35,9 @@
 				<div
 					class="flex flex-col justify-center h-24 align-middle border-b-2 border-emerald-900 grow"
 				>
-					<h1 class="text-3xl tracking-tight">{post.attributes.title}</h1>
+					<a href={'/blog/' + keys[i]}>
+						<h1 class="text-3xl tracking-tight">{post.attributes.title}</h1></a
+					>
 					<div class="flex flex-row text-base md:text-lg text-slate-500">
 						{post.attributes.date} · {Math.round(post.html.split(' ').length / 238)} minute read
 					</div>

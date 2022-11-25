@@ -1,6 +1,7 @@
 <script>
 	export let data;
 	let entries = Object.values(data.posts).slice(1, 4);
+	let keys = Object.keys(data.posts).slice(1, 5);
 
 	$: posts = data.posts;
 	$: slug = data.slug;
@@ -54,25 +55,31 @@
 		</div>
 	</div>
 </div>
-<div class="mx-6">
-	<div class="text-sm font-bold underline uppercase text-emerald-900">More Posts</div>
-	<div class="grid grid-cols-3 mx-4 space-x-16">
-		{#each entries as post, i}
-			{#if i != 2}
-				<div class="flex flex-col col-span-1 my-12 border-r-2 border-emerald-900">
-					<div class="flex flex-row mb-2 text-sm md:text-base text-slate-500">
-						{post.attributes.date} · {Math.round(post.html.split(' ').length / 238)} minute read
+<div class="max-w-screen-xl mx-auto">
+	<div class="mx-2 md:mx-10">
+		<div class="text-sm font-bold underline uppercase text-emerald-900">More Posts</div>
+		<div class="grid grid-cols-3 mx-6 space-x-4 md:space-x-8">
+			{#each entries as post, i}
+				{#if i != 2}
+					<div class="flex flex-col col-span-1 my-6 border-r-2 border-emerald-900">
+						<div class="flex flex-row mb-2 text-sm md:text-base text-slate-500">
+							{post.attributes.date} · {Math.round(post.html.split(' ').length / 238)} minute read
+						</div>
+						<a href={'/blog/' + keys[i]}
+							><h1 class="text-2xl tracking-tight">{post.attributes.title}</h1></a
+						>
 					</div>
-					<h1 class="text-2xl tracking-tight">{post.attributes.title}</h1>
-				</div>
-			{:else}
-				<div class="flex flex-col col-span-1 my-12">
-					<div class="flex flex-row mb-2 text-sm md:text-base text-slate-500">
-						{post.attributes.date} · {Math.round(post.html.split(' ').length / 238)} minute read
+				{:else}
+					<div class="flex flex-col col-span-1 my-6">
+						<div class="flex flex-row mb-2 text-sm md:text-base text-slate-500">
+							{post.attributes.date} · {Math.round(post.html.split(' ').length / 238)} minute read
+						</div>
+						<a href={'/blog/' + keys[i]}
+							><h1 class="text-2xl tracking-tight">{post.attributes.title}</h1></a
+						>
 					</div>
-					<h1 class="text-2xl tracking-tight">{post.attributes.title}</h1>
-				</div>
-			{/if}
-		{/each}
+				{/if}
+			{/each}
+		</div>
 	</div>
 </div>

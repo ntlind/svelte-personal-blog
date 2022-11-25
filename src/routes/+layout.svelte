@@ -28,8 +28,8 @@
 				<h1 class=" text-title-responsive">Nick Lind</h1>
 			</a>
 			<h2 class="z-50 my-auto space-x-4 text-lg md:text-2xl md:space-x-16">
-				<a href="/about">About</a>
-				<a href="/settings" class="px-4 py-2 text-white bg-emerald-900"> Contact </a>
+				<a href="/archive">Archive</a>
+				<a href="mailto: abc@example.com" class="px-4 py-2 text-white bg-emerald-900">Contact </a>
 			</h2>
 		</nav>
 	</div>

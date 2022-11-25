@@ -3,8 +3,9 @@ async function getPosts() {
 
 	let posts = {};
 	for (let path in allPosts) {
+		var filename = path.replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
 		const contents = await allPosts[path]();
-		posts[path] = contents;
+		posts[filename] = contents;
 	}
 
 	return posts;
@@ -13,7 +14,7 @@ async function getPosts() {
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
 	const posts = getPosts();
-	const slug = params.slug ? './content/' + params.slug + '.md' : null;
+	const slug = params.slug;
 
 	return { posts: posts, slug: slug };
 }
