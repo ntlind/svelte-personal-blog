@@ -5,9 +5,9 @@
 	// import '@fontsource/merriweather/700.css';
 	import '@fontsource/inter';
 
-	import Circle from '/images/circle.svg';
-	import Triangle from '/images/tri.svg';
-	import Square from '/images/square.svg';
+	import Circle from './images/circle.svg';
+	import Triangle from './images/tri.svg';
+	import Square from './images/square.svg';
 </script>
 
 <svelte:head>

@@ -1,7 +1,7 @@
 <script>
-	import Circle from '/images/circle.svg';
-	import Triangle from '/images/tri.svg';
-	import Square from '/images/square.svg';
+	import Circle from './images/circle.svg';
+	import Triangle from './images/tri.svg';
+	import Square from './images/square.svg';
 
 	export let data;
 	let keys = Object.keys(data.posts).slice(1, 5);
