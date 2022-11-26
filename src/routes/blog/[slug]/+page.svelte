@@ -21,19 +21,7 @@
 		<h2 class="text-2xl tracking-wide md:w-9/12 text-slate-500">
 			{description}
 		</h2>
-		<div class="pt-4">
-			<svg viewBox="0 0 100 5" xmlns="http://www.w3.org/2000/svg">
-				<line
-					x1="0"
-					y1="0"
-					x2="15"
-					y2="0"
-					stroke="#40E0D0"
-					stroke-width="5%"
-					stroke-opacity="30%"
-				/>
-			</svg>
-		</div>
+		<div class="w-0 pt-4 border-b-[12px] border-teal-400 border-opacity-50 draw-line" />
 		<div class="whitespace-pre-wrap lg:ml-12 lg:pl-24 text-slate-900">{@html body}</div>
 	</div>
 	<div class="my-auto mt-4 mb-12 text-2xl bg-emerald-900">

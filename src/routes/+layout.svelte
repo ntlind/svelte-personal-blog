@@ -14,13 +14,13 @@
 	<div class="relative max-w-screen-xl py-8 mx-auto text-xl md:py-16">
 		<div class={$page.url.pathname === '/' ? 'invisible' : ''}>
 			<div class="absolute z-0 object-cover w-[20rem] -top-48 -left-32 opacity-50">
-				<img src={Circle} alt="blob decorative shape" />
+				<img src={Circle} alt="blob decorative shape" class="fade-in" />
 			</div>
-			<div class="absolute z-0 object-cover w-[12rem] -top-48 right-56 opacity-90 rotate-45 ">
-				<img src={Triangle} alt="blob 2decorative shape" />
+			<div class="absolute z-0 object-cover w-[12rem] -top-48 right-56 opacity-90 ">
+				<img src={Triangle} alt="blob 2decorative shape" class="fade-in" />
 			</div>
-			<div class="absolute z-0 object-cover w-[20rem] -right-48 -top-24 rotate-12 opacity-70">
-				<img src={Square} alt="blob decorative shape" />
+			<div class="absolute z-0 object-cover w-[20rem] -right-48 -top-24 rotate-45 opacity-70">
+				<img src={Square} alt="blob decorative shape" class="fade-in" />
 			</div>
 		</div>
 		<nav class="flex flex-row justify-between mx-4">

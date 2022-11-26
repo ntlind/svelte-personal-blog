@@ -33,13 +33,88 @@
     );
 }
 
+
+@keyframes fadeInAnimation {
+    from {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+
+      }
+    
+      to {
+        transform: translate(10px, 10px) rotate(12deg);
+        opacity: 1;
+      }
+
+}
+
+@keyframes fadeUpAnimation {
+    from {
+        transform: translate(0, 10px) rotate(0deg);
+        opacity: 0;
+
+      }
+    
+      to {
+        transform: translate(0px, 0px) rotate(0deg);
+        opacity: 1;
+      }
+
+}
+
+@keyframes orbitAnimation {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(5px, 5px);
+    }
+    50% {
+        transform: translate(20px, 20px);
+    }
+    75% {
+        transform: translate(5px, 5px);
+    }
+    100% {
+        transform: translate(0, 0px);
+    }
+
+}
+
+.fade-in {
+    animation: fadeInAnimation ease .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.fade-up {
+    animation: fadeUpAnimation ease .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.draw-line{
+    -webkit-animation: increase ease .5s;
+    -moz-animation:    increase ease .5s; 
+    -o-animation:      increase ease .5s; 
+    animation:         increase ease .5s; 
+    animation-fill-mode: forwards;
+  }
+
+@keyframes increase {
+    100% {
+        width: 120px;
+    }
+}
+  
 body {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     /* Uncommnet for dark mode */
     /* @apply text-center text-black bg-white dark:bg-slate-800 dark:text-white; */
 
 }
-
 
 html {
     font-family: 'Inter', sans-serif;

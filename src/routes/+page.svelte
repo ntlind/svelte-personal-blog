@@ -9,27 +9,25 @@
 	let links = ['GitHub', 'LinkedIn', 'HackerNews', 'Goodreads'];
 </script>
 
-<div class="max-w-screen-xl mx-auto">
-	<h1 class="flex flex-col text-title-responsive  h-[40vh] pb-6 relative">
-		<div>
-			<div class="absolute z-0 object-cover w-[24rem] opacity-50 top-12">
-				<img src={Circle} alt="blob decorative shape" />
-			</div>
-			<div class="absolute z-0 object-cover w-[8rem] left-56 opacity-90 rotate-[80deg] ">
-				<img src={Triangle} alt="blob 2decorative shape" />
-			</div>
-			<div class="absolute z-0 object-cover w-[12rem] rotate-12 opacity-70 top-60">
-				<img src={Square} alt="blob decorative shape" />
-			</div>
-		</div>
-		<div class="relative mx-6 my-auto space-y-4 md:mx-20 lg:mx-32 z-2">
+<div class="relative max-w-screen-xl mx-auto">
+	<div class="absolute z-0 object-cover w-[20rem] opacity-50">
+		<img src={Circle} alt="blob decorative shape orbit" />
+	</div>
+	<div class="absolute z-0 object-cover w-[8rem] left-56 opacity-90 rotate-[80deg] top-24">
+		<img src={Triangle} alt="blob 2decorative shape" />
+	</div>
+	<div class="absolute z-0 object-cover w-[12rem] rotate-12 opacity-70">
+		<img src={Square} alt="blob decorative shape" />
+	</div>
+	<h1 class="flex flex-col text-title-responsive  h-[40vh] pb-6">
+		<div class="relative mx-6 my-auto space-y-4 md:mx-20 lg:mx-32 z-2 fade-up">
 			<div>I’m a developer & designer.</div>
 			<div>Currently based anywhere.</div>
 			<div>I love building products.</div>
 		</div>
 	</h1>
-	<div class="mx-2 font-bold underline uppercase md:mx-10">Latest Posts</div>
-	<div class="flex flex-col mx-2 mb-12 md:space-x-12 md:mx-10 md:grid md:grid-cols-12">
+	<div class="relative mx-2 font-bold underline uppercase md:mx-10 z-2">Latest Posts</div>
+	<div class="relative flex flex-col mx-2 mb-12 md:space-x-12 md:mx-10 md:grid md:grid-cols-12 z-2">
 		<div class="flex flex-col justify-between col-span-8">
 			{#each entries as post, i}
 				<div
