@@ -10,6 +10,17 @@
 	import Square from '/images/square.svg';
 </script>
 
+<svelte:head>
+	<link rel="icon" type="image/svg" href={Circle} />
+	<title
+		>{$page.url.pathname === '/'
+			? "Home | Nick's Personal Blog"
+			: $page.url.pathname + " | Nick's Personal Blog"}</title
+	>
+	<meta name="robots" content="noindex nofollow" />
+	<html lang="en" />
+</svelte:head>
+
 <div class="overflow-hidden">
 	<div class="relative max-w-screen-xl py-8 mx-auto text-xl md:py-16">
 		<div class={$page.url.pathname === '/' ? 'invisible' : ''}>
